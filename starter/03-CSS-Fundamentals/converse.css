@@ -11,6 +11,56 @@ body {
 .container {
   width: 825px;
   margin: 50px auto;
+  position: relative;
+}
+
+.container::before {
+  content: "SALE";
+  background-color: #f43333;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  display: inline-block;
+  padding: 8px 15px;
+  position: absolute;
+  top: -10px;
+  left: -30px;
+  letter-spacing: 0.15rem;
+}
+
+.colors {
+  margin-bottom: 25px;
+}
+
+.color {
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.color-black {
+  background-color: black;
+}
+
+.color-blue {
+  background-color: blue;
+}
+
+.color-yellow {
+  background-color: #ece03e;
+}
+
+.color-green {
+  background-color: green;
+}
+
+.color-red {
+  background-color: red;
+}
+
+.color-brown {
+  background-color: brown;
 }
 
 article {
