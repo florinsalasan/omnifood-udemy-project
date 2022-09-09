@@ -5,8 +5,9 @@
 
 body {
   color: #444;
-  font-family: sans-serifs;
+  font-family: sans-serif;
   border-top: 10px solid #1098ad;
+  position: relative;
 }
 
 .container {
@@ -43,6 +44,7 @@ h1 {
 h2 {
   font-size: 40px;
   margin-bottom: 30px;
+  position: relative;
 }
 
 h3 {
@@ -63,6 +65,17 @@ p {
   line-height: 1.5;
   margin-bottom: 15px;
 }
+
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+
+/*
+Adjacent sibling is the + and then :: is the pseudo element
+h3 + p::first-line {
+  color: red;
+} */
 
 ul,
 ol {
@@ -194,4 +207,37 @@ nav {
 .post-img {
   width: 100%;
   height: auto;
+}
+
+nav a {
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+nav a:last-child {
+  margin-right: none;
+}
+
+.like-button {
+  font-size: 22px;
+  padding: 20px;
+  position: absolute;
+  cursor: pointer;
+  bottom: 50px;
+  right: 50px;
+}
+
+/* This is a pseudo element */
+h2::after {
+  content: "TOP";
+  background-color: #ffe70e;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+  position: absolute;
+  top: -15px;
+  right: -20px;
+  color: #000;
 }
