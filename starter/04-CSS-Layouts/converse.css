@@ -36,7 +36,7 @@ body {
 .color {
   height: 20px;
   width: 20px;
-  display: inline-block;
+  /* display: inline-block; replacing this with flexbox layout*/
   margin-right: 10px;
 }
 
@@ -112,7 +112,7 @@ h1 {
 
 .details-list {
   list-style: square;
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
 .details-list li {
@@ -136,7 +136,46 @@ h1 {
   background-color: white;
 }
 
-.sample-image {
+/* FLEXBOX LAYOUT: */
+.flex-container {
+  display: flex;
+  gap: 40px;
+  flex: 1;
+}
+
+.info-column {
+  /* flex-basis: 243px; */
+  margin-top: 20px;
+  flex: 1;
+}
+
+.details-column {
+  /* flex-basis: 243px; */
+  margin-top: 20px;
+  flex: 1;
+}
+
+.price-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.shipping-price {
+  margin-bottom: 0;
+}
+
+.colors {
+  display: flex;
+}
+
+.item-description {
+  margin-bottom: 15px;
+}
+
+/* FLOAT LAYOUT: Outdated and Challenge 2 is replacing it with Flexbox */
+/* .sample-image {
   float: left;
   margin-right: 40px;
 }
@@ -170,4 +209,4 @@ h1 {
 
 .item-description {
   margin-bottom: 10px;
-}
+} */

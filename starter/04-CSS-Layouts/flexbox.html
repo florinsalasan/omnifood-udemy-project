@@ -40,6 +40,34 @@
         margin: 40px;
 
         /* FLEXBOX */
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        /* gap: 30px; */
+      }
+      .el {
+        /* flex: flex-grow flex-shrink flex-basis  */
+        /* margin-right: 20px; */
+        /* flex-basis: 200px; */
+        /* flex-shrink: 0;
+        flex-grow: 1; */
+        /* flex: 0 0 200px; */
+        flex: 1;
+      }
+
+      .el--1 {
+        align-self: flex-start;
+        /* order: 2;  this will push it further back than el--5 */
+        flex-grow: 2;
+        /* Grows into empty space at twice the rate of other elements that have flex-grow of 1 */
+      }
+      .el--5 {
+        align-self: stretch;
+        order: 1;
+      }
+
+      .el--6 {
+        order: -1;
       }
     </style>
   </head>
