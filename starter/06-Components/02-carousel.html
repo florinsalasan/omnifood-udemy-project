@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: #343a40;
+        line-height: 1;
+      }
+
+      .carousel {
+        background-color: #087f5b;
+        width: 800px;
+        margin: 100px auto;
+        border-radius: 8px;
+        color: #fff;
+        padding: 0;
+        display: flex;
+        gap: 32px;
+        height: 260px;
+        align-items: center;
+        position: relative;
+        /* Quick hack to sanity check if something is centered relative to an element, line below creates a vertical line to quickly check */
+        /* background: linear-gradient(#000, #000) no-repeat center/2px 100%; */
+      }
+
+      .testimonial-pic {
+        height: 300px;
+        /* transform: scale(1.5); */
+        border-radius: 8px;
+        box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
+        margin-left: -15px;
+      }
+      .testimonial-text {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.5;
+        margin-bottom: 32px;
+        color: #e6fcf5;
+        margin-right: -15px;
+      }
+
+      .testimonial-author {
+        font-size: 14px;
+        margin-bottom: 4px;
+        color: #c3fae8;
+        margin-bottom: 4px;
+      }
+
+      .testimonial-job {
+        font-size: 12px;
+        color: #c3fae8;
+      }
+      .btn-icon {
+        width: 22px;
+        height: 22px;
+        stroke-width: 2.5;
+        color: #087f5b;
+      }
+
+      /* WAYYYYYY Easier to just make the buttons absolutely positioned relative to the carousel, check the final file to see how, will also use absolute positioning for the 4 nav buttons under the carousel. */
+      .btn {
+        display: inline-block;
+        border-radius: 50%;
+        border: none;
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        padding: 0;
+        text-align: center;
+        background-color: #fff;
+        height: 40px;
+        /* width: 30px; */
+        padding: 9px;
+      }
+
+      .btn-left {
+        /* position: absolute; */
+        /* positioning an absolutely positioned element */
+        /* transform: translate(-50%, -50%), this moves the element 50% of the elements actual height which is the height of the parent container, effectively centering the absolute element and -50% of the elements width to the left as well to center it on the edge of the carousel */
+        margin-left: -18px;
+      }
+
+      .btn-right {
+        /* position: absolute; */
+        /* transform: translate(50%, -50%) */
+        margin-right: -18px;
+      }
+
+      .dots {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 32px);
+        display: flex;
+        gap: 10px;
+      }
+
+      .dot {
+        height: 12px;
+        width: 12px;
+        background-color: #fff;
+        border: 2px solid #087f5b;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .active-dot {
+        background-color: #087f5b;
+      }
+    </style>
+    <title>Carousel</title>
+  </head>
+  <body>
+    <div class="carousel">
+      <button class="btn btn-left">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 19.5L8.25 12l7.5-7.5"
+          />
+        </svg>
+      </button>
+      <img src="maria.jpg" alt="Maria de Almeida" class="testimonial-pic" />
+      <blockquote class="testimonial">
+        <p class="testimonial-text">
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio velit,
+          quasi perferendis totam incidunt recusandae dicta delectus ipsum
+          sapiente quo, ducimus provident? "
+        </p>
+        <p class="testimonial-author">Maria de Almeida</p>
+        <p class="testimonial-job">Product Manager at EDP Commercial</p>
+      </blockquote>
+      <button class="btn btn-right">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M8.25 4.5l7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </button>
+      <div class="dots">
+        <button class="dot active-dot">&nbsp</button>
+        <button class="dot">&nbsp</button>
+        <button class="dot">&nbsp</button>
+        <button class="dot">&nbsp</button>
+      </div>
+    </div>
+  </body>
+</html>
