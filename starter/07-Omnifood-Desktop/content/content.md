@@ -131,7 +131,17 @@ Privacy & terms
 
 ## Sections
 
+<!-- Typical order of content on landing pages -->
+
+- Navigation
 - Hero
-- Features
+- featured in
 - How it works
--
+- Diets
+- Meals
+<!-- Gallery was separate initially -->
+- Testimonials + gallery
+- Pricing combined with features from below
+- Features
+- Call to action
+- Footer
