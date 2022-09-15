@@ -40,9 +40,22 @@
   box-sizing: border-box;
 }
 
+html {
+  /* font-size: 10px; bad practice since this will always overwrite users set font, setting it as a percentage will just scale a users devices font size rather than just replacing it */
+  font-size: 62.5%;
+}
+
 body {
   font-family: sans-serif;
   line-height: 1;
   font-weight: 400;
   color: #555;
+}
+
+.test {
+  background-color: red;
+  padding: 100px;
+  max-width: 50rem;
+  font-size: 2rem;
+  /* 1rem = 16px by default, thus max-width @ 50rem is 800px unless font-size is changed, best practice is to set it in html and scale font throughout the rest of the doc */
 }
