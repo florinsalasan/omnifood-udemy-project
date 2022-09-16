@@ -95,19 +95,20 @@ body {
   margin-right: auto;
 }
 
+.navbar-link {
+  border: 1rem solid transparent;
+  transition: color 0.15s ease-in 100ms, border 0.2s ease-in 100ms;
+}
+
 .logo-link {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  text-decoration: none;
-  color: #000000;
-  border: 5px solid pink;
-}
-
-.navbar-link {
-  border: 1rem solid transparent;
-  transition: color 0.15s ease-in 100ms, border 0.2s ease-in 100ms;
+  /* text-decoration: none; */
+  /* color: #000000; */
+  border: none;
+  /* box-shadow: none; */
 }
 
 .navbar-link:link,
@@ -136,17 +137,22 @@ body {
   width: 2.4rem;
   /* height: 24px;
   width: 24px; */
-  stroke: #fff;
+  stroke: #555;
   background-color: transparent;
   stroke-width: 0.15rem;
+  margin-left: 0.8rem;
 }
 
 .btn {
   box-shadow: 0rem 0rem 1rem 1rem transparent;
   transition: box-shadow 0.15s ease-in 100ms;
+  transition: background-color 0.15s ease-in 100ms;
   border: 1rem solid transparent;
   border-radius: 1rem;
-  padding: 0.2rem 1.2rem;
+  padding: 0.2rem auto;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 400;
 }
 
 .btn:link,
@@ -159,10 +165,27 @@ body {
   background-color: #e8590c;
 }
 
+.logo-link {
+  transition: box-shadow 0.15s ease-in 100ms;
+}
+
+.logo-link:link,
+.logo-link:visited,
+.logo-link:hover {
+  cursor: pointer;
+}
+
+.logo-link:focus,
+.logo-link:active,
 .btn:focus,
 .btn:active {
   box-shadow: 0rem 0rem 0rem 1rem #e67d229a;
   outline: none;
+}
+
+.logo-link:focus,
+.logo-link:active {
+  border: none;
 }
 
 .btn-navbar:hover {
@@ -174,16 +197,17 @@ body {
 }
 
 .hero-tagline {
-  font-size: 5.2rem;
+  font-size: 4.4rem;
   color: #212529;
   /* font-weight: 400; */
-  margin-bottom: 3.2rem;
+  margin-bottom: 4.8rem;
 }
 
 .summary {
   font-size: 2rem;
   font-weight: 400;
-  margin-bottom: 3.2rem;
+  margin-bottom: 4.8rem;
+  line-height: 1.5;
 }
 
 .client-face-container {
@@ -200,4 +224,62 @@ body {
   border-radius: 50%;
   border-collapse: separate;
   margin-right: -1.5rem;
+}
+
+.hero-btn-holder {
+  display: flex;
+  /* flex-direction: row; */
+  /* height: 8.4rem; */
+  gap: 1.6rem;
+}
+
+.btn-hero {
+  margin-bottom: 6.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5.2rem;
+  max-width: 45%;
+  padding: 0 3.2rem;
+}
+
+.link-to-info:link,
+.link-to-info:visited {
+  background-color: #fff;
+  color: #555;
+  border: 0.2rem solid transparent;
+}
+
+.link-to-info:hover {
+  background-color: #fdf2e9;
+  box-shadow: none;
+}
+
+.link-to-info:hover,
+.link-to-info:focus,
+.link-to-info:active {
+  border: 0.2rem solid #fff;
+}
+
+.link-to-info:hover.border:before,
+.link-to-info:focus.border:before,
+.link-to-info:active.border:before {
+  position: absolute;
+  display: block;
+  content: "";
+  border: 0.5rem solid transparent;
+}
+
+.customer-satisfaction-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.client-size-brag {
+  font-size: 1.8rem;
+}
+
+.customer-totals {
+  color: #e67e22;
 }
