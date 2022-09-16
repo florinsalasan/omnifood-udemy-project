@@ -62,10 +62,14 @@ section {
 
 section div {
   max-width: 130rem;
+  margin: 0 auto;
 }
 
-/* CSS RELATED TO THE HERO SECTION IS BELOW */
-
+/* *********************************************** */
+/*                                                 */
+/* CSS RELATED TO THE HERO SECTION IS BELOW        */
+/*                                                 */
+/* *********************************************** */
 .section-hero {
   background: #fdf2e9;
 }
@@ -217,7 +221,8 @@ section div {
 
 .client-face-container {
   display: flex;
-  max-width: 12rem;
+  margin: 0;
+  /* max-width: 12rem; */
   /* --gap: -1.5rem;
   flex-wrap: nowrap;
   margin-left: 1.5rem; */
@@ -229,6 +234,10 @@ section div {
   border-radius: 50%;
   border-collapse: separate;
   margin-right: -1.5rem;
+}
+
+.client-face-img:last-of-type {
+  margin-right: 1rem;
 }
 
 .hero-btn-holder {
@@ -289,7 +298,11 @@ section div {
   color: #e67e22;
 }
 
-/* CSS RELATED TO THE FEATURED IN SECTION IS BELOW */
+/* ************************************************** */
+/*                                                    */
+/* CSS RELATED TO THE FEATURED IN SECTION IS BELOW    */
+/*                                                    */
+/* ************************************************** */
 .featured-in {
   display: flex;
   flex-direction: column;
@@ -301,7 +314,7 @@ section div {
 .featured-in p {
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   padding-bottom: 2.4rem;
   color: #777;
 }
@@ -320,3 +333,9 @@ section div {
   opacity: 50%;
   height: 3.2rem;
 }
+
+/* ************************************************** */
+/*                                                    */
+/* CSS RELATED TO HOW IT WORKS SECTION IS BELOW       */
+/*                                                    */
+/* ************************************************** */
