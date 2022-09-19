@@ -643,7 +643,7 @@ h6 {
   /* padding: 9.6rem 1.6rem 9.6rem 9.6rem; */
   max-width: 100%;
   column-gap: 0;
-  padding-top: 8rem;
+  /* padding-top: 8rem; */
 }
 
 .testimonial-img-container {
@@ -660,6 +660,7 @@ h6 {
 
 .testimonials-examples {
   column-gap: 8rem;
+  row-gap: 4.8rem;
 }
 
 /* Can remove the css style below in order to get the images to pop up on hover rather than just zoom within their container. Should probably add box-shadow if it is changed to let them pop up. */
@@ -684,7 +685,7 @@ h6 {
 }
 
 .testimonials-and-header {
-  padding: 0rem 9.6rem 9.6rem 9.6rem;
+  padding: 8rem 9.6rem 9.6rem 9.6rem;
 }
 
 .sample-testimonial {
