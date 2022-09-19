@@ -21,6 +21,7 @@
   Shades: #e8590c for hovering on orange buttons
   Accents:
   Greys: #555
+         #333 for all headings
 
 
 --- 03 SHADOWS
@@ -66,9 +67,29 @@ section {
   align-items: center;
 }
 
-section div {
+section > div {
   max-width: 120rem;
   margin: 0 auto;
+}
+
+/* 
+The only svgs that are being used are icons from heroicons that are made to be 24px tall and with a stroke width of 1.5px 
+color defaults to the branding color
+*/
+svg {
+  height: 2.4rem;
+  width: 2.4rem;
+  stroke-width: 0.15rem;
+  stroke: #e67e22;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #333;
 }
 
 /* *********************************************** */
@@ -82,20 +103,28 @@ section div {
   flex-direction: column;
   gap: 2.4rem;
   align-items: flex-start;
+  padding-top: 1.6rem;
+}
+
+.grid {
+  display: grid;
+  column-gap: 9.6rem;
+  row-gap: 9.6rem;
+  width: 120rem;
 }
 
 .grid-2-cols {
-  display: grid;
+  /* display: grid; */
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 9.6rem;
-  row-gap: 9.6rem;
+  /* column-gap: 9.6rem;
+  row-gap: 9.6rem; */
 }
 
 .grid-3-cols {
-  display: grid;
+  /* display: grid; */
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 9.6rem;
-  row-gap: 9.6rem;
+  column-gap: 6.4rem;
+  /* row-gap: 4.8rem; */
 }
 
 .crosslength {
@@ -110,8 +139,16 @@ section div {
 
 .title-explained {
   font-size: 4.4rem;
-  color: #212529;
+  /* color: #212529; */
   font-weight: 700;
+}
+
+.img-container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* *********************************************** */
@@ -193,8 +230,8 @@ section div {
 }
 
 .arrow-down {
-  height: 2.4rem;
-  width: 2.4rem;
+  /* height: 2.4rem;
+  width: 2.4rem; */
   /* height: 24px;
   width: 24px; */
   stroke: #555;
@@ -399,7 +436,7 @@ section div {
 
 .how-it-works {
   padding: 0 3.2rem;
-  padding-bottom: 9.6rem;
+  padding-bottom: 12.8rem;
 }
 
 .hiw-step {
@@ -415,7 +452,7 @@ section div {
 
 .step-name {
   font-size: 3rem;
-  color: #000;
+  /* color: #000; */
   margin-bottom: 1.6rem;
   line-height: 1.3;
 }
@@ -423,15 +460,6 @@ section div {
 .step-explained {
   font-size: 1.8rem;
   line-height: 1.6;
-}
-
-.hiw-img-container {
-  /* width: 35%; */
-  width: 100%;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .hiw-img {
@@ -469,3 +497,128 @@ section div {
 /* CSS RELATED TO MEALS + DIET SECTION IS BELOW       */
 /*                                                    */
 /* ************************************************** */
+
+.meals-diet-container {
+  padding: 0 3.2rem;
+}
+
+.recipe-card {
+  position: relative;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 1rem;
+  box-shadow: 0rem 1rem 4rem 1rem #eee;
+  transition: top ease 0.5s;
+}
+
+.recipe-card:hover {
+  top: -1rem;
+}
+
+.recipe-info-container {
+  padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+}
+
+.recipe-card-img {
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.recipe-container {
+  display: flex;
+  gap: 2.4rem;
+}
+
+.recipe-line {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  font-size: 1.8rem;
+}
+
+.nutrition-info-container {
+  flex-direction: column;
+}
+
+.categories-container {
+  gap: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.recipe-category {
+  border-radius: 1.5rem;
+  padding: 0.3rem 0.8rem;
+  /* border: 1px solid pink; */
+  background-color: pink;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.recipe-name {
+  font-size: 2.4rem;
+  padding-bottom: 3.2rem;
+}
+
+.diet-compatibility-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.diet-list-intro {
+  font-size: 3rem;
+  padding-bottom: 2.4rem;
+}
+
+.diet-example-container {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+.checkmark-icon {
+  height: 3rem;
+  width: 3rem;
+}
+
+.vegan {
+  background-color: rgb(32, 220, 32);
+}
+
+.vegetarian {
+  background-color: rgb(95, 249, 60);
+}
+
+.paleo {
+  background-color: rgb(255, 225, 28);
+}
+
+.recipe-link {
+  margin: 3rem auto;
+  text-decoration: none;
+  padding-bottom: 0.1rem;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+.recipe-link:link,
+.recipe-link:visited {
+  color: #e67e22;
+  border-bottom: 0.1rem solid currentColor;
+}
+
+.recipe-link:focus {
+  box-shadow: 0rem 0rem 0rem 1rem #e67d229a;
+}
+
+.recipe-link:hover,
+.recipe-link:focus,
+.recipe-link:active {
+  color: #e8590c;
+  border-bottom: 0.1rem solid transparent;
+}
