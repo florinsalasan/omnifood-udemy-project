@@ -110,7 +110,7 @@ h6 {
   display: grid;
   column-gap: 9.6rem;
   row-gap: 9.6rem;
-  width: 120rem;
+  /* width: 120rem; */
 }
 
 .grid-2-cols {
@@ -123,7 +123,7 @@ h6 {
 .grid-3-cols {
   /* display: grid; */
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 6.4rem;
+  /* column-gap: 6.4rem; */
   /* row-gap: 4.8rem; */
 }
 
@@ -599,7 +599,7 @@ h6 {
 }
 
 .recipe-link {
-  margin: 3rem auto;
+  margin: 4.8rem auto 8rem auto;
   text-decoration: none;
   padding-bottom: 0.1rem;
   font-size: 1.8rem;
@@ -621,4 +621,23 @@ h6 {
 .recipe-link:active {
   color: #e8590c;
   border-bottom: 0.1rem solid transparent;
+}
+
+/* ************************************************** */
+/*                                                    */
+/* CSS RELATED TO TESTIMONIALS SECTION IS BELOW       */
+/*                                                    */
+/* ************************************************** */
+
+.testimonials-section {
+  background-color: #fdf2e9;
+}
+
+.testimonials-container {
+  grid-template-columns: 55fr 45fr;
+  padding-top: 9.6rem;
+}
+
+.gallery-img {
+  width: 100%;
 }
