@@ -812,6 +812,7 @@ h6 {
 .shared-features-container {
   display: flex;
   gap: 2.4rem;
+  margin-bottom: 4.8rem;
 }
 
 .shared-feature {
@@ -837,4 +838,117 @@ h6 {
 .feature-description {
   font-size: 1.6rem;
   line-height: 1.8;
+}
+
+/* ************************************************** */
+/*                                                    */
+/* CSS RELATED TO CTA SECTION IS BELOW                */
+/*                                                    */
+/* ************************************************** */
+
+.cta-container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+  padding-bottom: 12.8rem;
+  /* overflow: hidden; */
+}
+
+.cta-grid {
+  grid-template-columns: 2fr 1fr;
+  border-radius: 1rem;
+  border: none;
+  column-gap: 0;
+  background-color: hsl(28, 80%, 60%);
+}
+
+.cta-img {
+  width: 100%;
+  border-radius: 0 1rem 1rem 0;
+  height: 100%;
+  display: none;
+}
+
+.cta-text-parts {
+  width: 100%;
+  padding: 6.4rem 6.4rem;
+}
+
+.cta-title {
+  font-size: 4.4rem;
+  margin-bottom: 4.4rem;
+}
+
+.cta-prompt {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 4.4rem;
+}
+
+.cta-img-container {
+  width: 100%;
+  background: linear-gradient(to right, #e67d2244, #e67d2244),
+    url("../img/eating.jpg");
+
+  color: #e67d228c;
+  background-size: cover;
+  border-radius: 0 1rem 1rem 0;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.form-input label {
+  color: #333;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.form-input input {
+  border-radius: 1rem;
+  border: none;
+  height: 2.4rem;
+  padding: 2rem;
+  font-size: 1.8rem;
+  color: #333;
+  background-color: #fdf2e9;
+}
+
+.cta-sign-up {
+  column-gap: 3.2rem;
+  row-gap: 4.4rem;
+  justify-content: center;
+}
+
+#select-where {
+  padding: 1.5rem;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.8rem;
+  color: #333;
+  background-color: #fdf2e9;
+}
+
+.btn-form {
+  padding: 0.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+  background: rgb(60, 37, 15);
+  color: #fff;
+  transition: all 0.2s;
+}
+
+.btn-form:hover {
+  background-color: #fdf2e9;
+  color: #333;
+}
+
+.btn-form:active,
+.btn-form:focus {
+  box-shadow: 0rem 0rem 0rem 1rem #fff;
 }
