@@ -712,6 +712,129 @@ h6 {
 /* ************************************************** */
 
 .pricing-container {
-  padding: 9.6rem 0;
+  padding: 9.6rem 3.2rem;
   width: 100%;
+  column-gap: 6.4rem;
+  row-gap: 4.8rem;
+}
+
+.pricing-header {
+  margin-bottom: 5.2rem;
+}
+
+.price-info-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
+  border-radius: 1rem;
+  border: 2px solid #fdf2e9;
+  width: 75%;
+  padding: 4.8rem;
+}
+
+.preferred-price {
+  background-color: #fdf2e9;
+  position: relative;
+  overflow: hidden;
+}
+
+.preferred-price::after {
+  content: "Best value";
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  background-color: gold;
+  position: absolute;
+  top: 3rem;
+  right: 5rem;
+  width: 25rem;
+  padding: 0.5rem;
+  text-align: center;
+  font-weight: 600;
+  display: block;
+  transform: translate(50%, 50%) rotate(45deg);
+  color: #333;
+}
+
+.starter-card {
+  justify-self: end;
+}
+
+.price-tier {
+  color: #e67e22;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  margin: 0 auto;
+}
+
+.included-benefits-price-card {
+  list-style: none;
+  line-height: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.included-benefit {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.plan-cost {
+  font-size: 6.2rem;
+}
+
+.tiny-dollar-sign {
+  font-size: 3rem;
+}
+
+.cost-breakdown {
+  font-size: 1.4rem;
+}
+
+.price-item {
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+.price-btn {
+  padding: 1rem 3.2rem;
+}
+
+.price-disclaimer {
+  margin: 0 auto;
+  font-size: 1.6rem;
+  margin-bottom: 4.6rem;
+}
+
+.shared-features-container {
+  display: flex;
+  gap: 2.4rem;
+}
+
+.shared-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.6rem;
+}
+
+.shared-feature-icon {
+  height: 3.6rem;
+  width: 3.6rem;
+  background-color: #fdf2e9;
+  border-radius: 50%;
+  box-shadow: 0 0 0rem 1rem #fdf2e9;
+  margin-bottom: 1.4rem;
+}
+
+.feature-name {
+  font-size: 2rem;
+}
+
+.feature-description {
+  font-size: 1.6rem;
+  line-height: 1.8;
 }
