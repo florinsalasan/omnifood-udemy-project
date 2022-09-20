@@ -704,3 +704,14 @@ h6 {
   font-size: 1.6rem;
   color: #777;
 }
+
+/* ************************************************** */
+/*                                                    */
+/* CSS RELATED TO PRICING SECTION IS BELOW            */
+/*                                                    */
+/* ************************************************** */
+
+.pricing-container {
+  padding: 9.6rem 0;
+  width: 100%;
+}
