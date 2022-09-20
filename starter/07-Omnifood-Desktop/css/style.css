@@ -1039,3 +1039,17 @@ h6 {
   font-size: 1.6rem;
   font-weight: 400;
 }
+
+.contact-info {
+  margin-top: 1.8rem;
+}
+
+.personal-disclaimer {
+  padding-left: 4.4rem;
+  padding-bottom: 2rem;
+}
+
+.disclaimer-link {
+  font-size: 1rem;
+  font-weight: 500;
+}
