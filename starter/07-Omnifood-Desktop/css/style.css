@@ -1098,6 +1098,10 @@ h6 {
     max-width: 100%;
     margin-bottom: 3.2rem;
   }
+
+  .meals-diet-container {
+    column-gap: 3rem;
+  }
 }
 
 /* ~880 px */
@@ -1133,10 +1137,6 @@ h6 {
 
   .step-num {
     font-size: 5rem;
-  }
-
-  .meals-diet-container {
-    column-gap: 3rem;
   }
 
   .recipe-info-text {
@@ -1244,6 +1244,12 @@ h6 {
   .gallery {
     grid-template-columns: repeat(6, 1fr);
   }
+
+  .shared-features-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 4rem;
+  }
 }
 
 /* 640 px */
@@ -1313,11 +1319,11 @@ h6 {
     font-size: 1.2rem;
   }
 
-  .shared-features-container {
+  /* .shared-features-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     row-gap: 4rem;
-  }
+  } */
 
   .feature-name {
     font-size: 1.8rem;
