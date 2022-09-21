@@ -343,6 +343,7 @@ h6 {
   height: 5.2rem;
   max-width: 45%;
   padding: 0 3.2rem;
+  text-align: center;
 }
 
 .link-to-info:link,
@@ -401,6 +402,7 @@ h6 {
   align-items: center;
   justify-content: center;
   padding: 4.8rem 2.4rem;
+  width: 100%;
 }
 
 .featured-in p {
@@ -413,17 +415,16 @@ h6 {
 
 .featured-in-gallery {
   display: flex;
-  flex: 0 0 15%;
   align-items: center;
-  justify-content: center;
-  gap: 4.4rem;
-  max-width: 100%;
+  justify-content: space-around;
+  width: 100%;
 }
 
 .featured-in-img {
   filter: brightness(0);
   opacity: 50%;
   height: 3.2rem;
+  /* width: 100%; */
 }
 
 /* ************************************************** */
@@ -682,6 +683,7 @@ h6 {
   column-gap: 1.6rem;
   row-gap: 1.6rem;
   padding: 1.6rem;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .testimonials-and-header {
@@ -895,6 +897,7 @@ h6 {
   color: #e67d228c;
   background-size: cover;
   border-radius: 0 1rem 1rem 0;
+  background-position: center;
 }
 
 .form-input {
@@ -1052,4 +1055,522 @@ h6 {
 .disclaimer-link {
   font-size: 1rem;
   font-weight: 500;
+}
+
+/* ********************************************* */
+/*                                               */
+/*              MEDIA QUERIES                    */
+/*                                               */
+/* ********************************************* */
+
+/* Select breakpoints based on a mix of design breakdown and relative screen width of device types */
+
+/* @media screen and (min-width: 120.1rem) {
+  .testimonials-examples {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 9.4rem;
+  }
+} */
+
+/* ~1200px */
+@media screen and (max-width: 75rem) {
+  .testimonials-examples {
+    grid-template-columns: 1fr;
+    row-gap: 9.6rem;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ~1104 px */
+@media screen and (max-width: 69rem) {
+  .featured-in-img {
+    height: 2.4rem;
+  }
+
+  .hero-btn-holder {
+    flex-direction: column;
+    gap: 0rem;
+  }
+  .btn-hero {
+    max-width: 100%;
+    margin-bottom: 3.2rem;
+  }
+}
+
+/* ~880 px */
+@media (max-width: 55rem) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-btn-holder {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4.4rem;
+  }
+
+  .btn-hero {
+    max-width: 100%;
+    margin-bottom: 3.2rem;
+  }
+
+  .big-hero-img {
+    max-width: 60%;
+    margin: 0 auto;
+  }
+
+  .customer-satisfaction-container {
+    justify-content: center;
+  }
+
+  .featured-in-img {
+    height: 1.5rem;
+  }
+
+  .step-num {
+    font-size: 5rem;
+  }
+
+  .meals-diet-container {
+    column-gap: 3rem;
+  }
+
+  .recipe-info-text {
+    font-size: 1.4rem;
+  }
+
+  .recipe-card {
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    /* gap: 3rem; */
+  }
+
+  .recipe-info-container {
+    padding: 2rem;
+  }
+
+  .recipe-name {
+    font-size: 2.2rem;
+  }
+
+  .diet-compatibility-list {
+    gap: 1rem;
+  }
+
+  .diet-list-intro {
+    font-size: 2.4rem;
+  }
+
+  .pricing-container {
+    column-gap: 3rem;
+  }
+  .price-info-card {
+    width: 100%;
+  }
+
+  .cta-grid {
+    grid-template-columns: 3fr 2fr;
+  }
+
+  .cta-title {
+    font-size: 2.6rem;
+    margin-bottom: 2rem;
+  }
+
+  .cta-prompt {
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+  }
+
+  .cta-sign-up {
+    grid-template-columns: 1fr;
+    row-gap: 1.8rem;
+  }
+
+  .form-input {
+    gap: 0.5rem;
+  }
+
+  /* .cta-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } */
+
+  .footer-container {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 3fr 4fr;
+  }
+
+  .footer-column:first-child {
+    grid-column: span 3;
+    grid-row: 2 / -1;
+  }
+
+  .footer-column:nth-child(2) {
+    grid-column: span 3;
+    grid-row: 2 / -1;
+  }
+
+  .footer-column {
+    grid-column: span 2;
+  }
+
+  .testimonials-container {
+    grid-template-columns: 1fr;
+    row-gap: 0;
+  }
+
+  .testimonials-and-header {
+    padding: 8rem 3.2rem;
+  }
+
+  .testimonials-examples {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 4.4rem;
+  }
+
+  .testimonial-content {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* 640 px */
+@media (max-width: 40rem) {
+  .featured-in-section {
+    margin-bottom: 2.2rem;
+  }
+
+  .featured-in {
+    margin: 0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .featured-in-img {
+    height: 1.1rem;
+  }
+
+  .meals-diet-container {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 5rem;
+  }
+
+  .diet-compatibility-list {
+    justify-self: center;
+    grid-column: span 2;
+  }
+
+  .how-it-works {
+    column-gap: 2rem;
+    padding-bottom: 6rem;
+  }
+
+  .hiw-step {
+    gap: 0.5rem;
+  }
+
+  .step-num {
+    font-size: 5rem;
+  }
+
+  .step-name {
+    font-size: 2rem;
+  }
+
+  .step-explained {
+    font-size: 1.4rem;
+  }
+
+  .price-info-card {
+    padding: 1rem;
+    padding-top: 5rem;
+  }
+
+  .price-feature-item {
+    font-size: 1.4rem;
+  }
+
+  .included-benefits-price-card {
+    gap: 1rem;
+  }
+
+  .price-btn {
+    padding: 0.3rem;
+  }
+
+  .price-disclaimer {
+    font-size: 1.2rem;
+  }
+
+  .shared-features-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 4rem;
+  }
+
+  .feature-name {
+    font-size: 1.8rem;
+  }
+
+  .feature-description {
+    font-size: 1.2rem;
+  }
+}
+
+/* 560 px */
+@media screen and (max-width: 35rem) {
+  .title-explained {
+    font-size: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .btn-hero {
+    margin-bottom: 1rem;
+    width: 75%;
+  }
+
+  .btn-hero:last-child {
+    margin-bottom: 3rem;
+  }
+
+  .hero-btn-holder {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .btn {
+    padding: 0.5rem;
+  }
+
+  .how-it-works {
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+    padding-bottom: 0;
+  }
+
+  .testimonial-header {
+    margin-bottom: 4rem;
+  }
+
+  .hiw-step {
+    margin-bottom: 5rem;
+  }
+
+  .hiw-step:nth-child(2) {
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+
+  .hiw-step:nth-child(6) {
+    grid-row-start: 7;
+    grid-row-end: 8;
+  }
+
+  .meals-diet-container {
+    row-gap: 3.6rem;
+  }
+
+  .recipe-card {
+    grid-column: span 2;
+  }
+
+  .testimonials-examples {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .pricing-header {
+    margin-bottom: 0;
+  }
+
+  .price-info-card {
+    grid-column: span 2;
+    padding: 5rem;
+  }
+
+  .pricing-container {
+    padding-bottom: 4.8rem;
+  }
+
+  .shared-features-container {
+    gap: 5rem;
+  }
+
+  .shared-feature {
+    grid-column: span 2;
+  }
+
+  .cta-container {
+    padding-bottom: 6.4rem;
+  }
+
+  .cta-grid {
+    row-gap: 0;
+  }
+
+  .cta-text-parts {
+    grid-column: span 2;
+  }
+
+  .cta-img-container {
+    height: 32rem;
+    grid-column: span 2;
+    grid-row: 1;
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  .footer-container {
+    gap: 3rem;
+  }
+
+  .footer-link {
+    font-size: 1.4rem;
+  }
+
+  .social-container {
+    gap: 1rem;
+  }
+
+  .address {
+    font-size: 1.2rem;
+  }
+
+  .copyright-footer {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .hero {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .footer-link {
+    font-size: 1.2rem;
+  }
+
+  .cta-container {
+    padding: 1rem;
+  }
+
+  .cta-sign-up {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* max-width: 70%; */
+  }
+
+  .cta-text-parts {
+    padding: 1rem;
+  }
+
+  .form-input {
+    max-width: 95%;
+  }
+
+  .footer-container {
+    column-gap: 1.5rem;
+    row-gap: 2rem;
+  }
+
+  .footer-column {
+    gap: 1.2rem;
+  }
+
+  .social-container {
+    gap: 0.5rem;
+  }
+
+  .footer-link {
+    font-size: 1rem;
+  }
+
+  .main-col-category {
+    font-size: 1.2rem;
+  }
+
+  .copyright-footer {
+    font-size: 1rem;
+  }
+}
+
+/* Does anyone even own a galaxy fold to have a width of 280px?? */
+@media screen and (max-width: 280px) {
+  .featured-in-gallery {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    row-gap: 3.2rem;
+  }
+
+  .featured-in-img-container {
+    grid-column: span 3;
+  }
+
+  .featured-in-img-container:nth-child(4) {
+    grid-column: 2 / 5;
+  }
+
+  .featured-in-img-container:last-child {
+    grid-column: 6 / -2;
+  }
+
+  .customer-satisfaction-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .hero {
+    row-gap: 3rem;
+    padding-bottom: 4rem;
+  }
+
+  .hero-tagline {
+    font-size: 3rem;
+  }
+
+  .summary {
+    font-size: 1.6rem;
+  }
+
+  .title-explained {
+    font-size: 2.8rem;
+  }
+
+  .recipe-info-text {
+    font-size: 1.2rem;
+  }
+
+  .price-info-card {
+    padding: 1rem;
+  }
+
+  .complete-card {
+    padding-top: 8rem;
+  }
+
+  .cost-breakdown {
+    font-size: 1rem;
+  }
+
+  .price-feature-item {
+    font-size: 1.2rem;
+  }
 }
