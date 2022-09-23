@@ -51,6 +51,7 @@
 html {
   /* font-size: 10px; bad practice since this will always overwrite users set font, setting it as a percentage will just scale a users devices font size rather than just replacing it */
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -58,6 +59,9 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #555;
+
+  /* only works if there is nothing absolutly positioned in relation to the body */
+  overflow-x: hidden;
 }
 
 section {
@@ -153,6 +157,34 @@ h6 {
 
 /* *********************************************** */
 /*                                                 */
+/* MOBILE SPECIFIC CSS BELOW                       */
+/*                                                 */
+/* *********************************************** */
+
+.header-header {
+  position: relative;
+}
+
+.nav-menu-btn {
+  background: none;
+  cursor: pointer;
+
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 3rem;
+  width: 3rem;
+  stroke: #212529;
+  stroke-width: 1;
+}
+
+.icon-menu-close {
+  display: none;
+}
+
+/* *********************************************** */
+/*                                                 */
 /* CSS RELATED TO THE HERO SECTION IS BELOW        */
 /*                                                 */
 /* *********************************************** */
@@ -186,6 +218,12 @@ h6 {
   background-color: #fdf2e9;
 }
 
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
 .logo-link,
 .navbar-logo {
   height: 2.2rem;
@@ -195,6 +233,7 @@ h6 {
 .navbar-link {
   border: 1rem solid transparent;
   transition: color 0.15s ease-in 100ms, border 0.2s ease-in 100ms;
+  font-size: 1.8rem;
 }
 
 .logo-link {
@@ -212,7 +251,6 @@ h6 {
 .navbar-link:visited {
   text-decoration: none;
   color: #555;
-  font-size: 1.8rem;
   font-weight: 400;
 }
 
@@ -246,7 +284,7 @@ h6 {
   transition: background-color 0.15s ease-in 100ms;
   border: 1rem solid transparent;
   border-radius: 1rem;
-  padding: 0.2rem auto;
+  padding: 0.2rem;
   text-decoration: none;
   font-size: 1.8rem;
   font-weight: 400;
@@ -1060,7 +1098,9 @@ h6 {
 /* ********************************************* */
 /*                                               */
 /*              MEDIA QUERIES                    */
-/*                                               */
+/*    Next time adjust the font-size in an html  */
+/*      selector and adjust from there with      */
+/*      percentages                              */
 /* ********************************************* */
 
 /* Select breakpoints based on a mix of design breakdown and relative screen width of device types */
@@ -1101,6 +1141,14 @@ h6 {
 
   .meals-diet-container {
     column-gap: 3rem;
+  }
+
+  .main-nav {
+    gap: 1rem;
+  }
+
+  .navbar-link {
+    font-size: 1.6rem;
   }
 }
 
@@ -1249,6 +1297,58 @@ h6 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     row-gap: 4rem;
+  }
+
+  /* collapse the navbar in this section */
+  .nav-menu-btn {
+    display: block;
+    z-index: 5;
+  }
+
+  .main-nav {
+    background-color: rgba(255, 255, 255, 0.97);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4.8rem;
+    transition: all 0.4s ease-in;
+
+    /* Cannot hide with display:none as that would prevent the use of transitions/animations */
+    /* Hide visually */
+    opacity: 0;
+
+    /* Make it untargetable */
+    pointer-events: none;
+
+    /* Hide from screen readers */
+    visibility: hidden;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0%);
+  }
+
+  .nav-open .icon-menu-close {
+    display: block;
+  }
+
+  .nav-open .icon-menu-open {
+    display: none;
+  }
+
+  .navbar-link {
+    font-size: 3rem;
   }
 }
 
