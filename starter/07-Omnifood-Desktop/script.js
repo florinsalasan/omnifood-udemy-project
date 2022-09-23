@@ -68,8 +68,8 @@ const obs = new IntersectionObserver(function (entries) {
     document.querySelector('.navbar').classList.add('sticky')
   }
   if (ent.isIntersecting === true) {
-    sectionHeroEle.classList.toggle("sticky-active")
-    document.querySelector('.navbar').classList.toggle('sticky')
+    sectionHeroEle.classList.remove("sticky-active")
+    document.querySelector('.navbar').classList.remove('sticky')
   }
 }, {
   //In the viewport
@@ -104,7 +104,11 @@ function checkFlexGap() {
 }
 checkFlexGap();
 
+// script for smooth scrolling to be used with the js written above, just import to index.html and other pages that are being used
 // https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
+
+
+// Styling for any browsers that do not support flexbox gap to be used in conjunction with the js function above
 
 /*
 .no-flexbox-gap .main-nav-list li:not(:last-child) {
