@@ -99,6 +99,12 @@ h6 {
   color: #333;
 }
 
+picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* *********************************************** */
 /*                                                 */
 /* CSS RELATED TO THE GENERAL STYLING IS BELOW     */
@@ -1702,5 +1708,17 @@ h6 {
 
   .price-feature-item {
     font-size: 1.2rem;
+  }
+
+  .navbar-logo {
+    height: 1.3rem;
+  }
+
+  .nav-menu-btn {
+    transform: scale(0.8);
+  }
+
+  .navbar {
+    padding: 0 2rem;
   }
 }
