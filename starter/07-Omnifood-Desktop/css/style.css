@@ -52,6 +52,9 @@ html {
   /* font-size: 10px; bad practice since this will always overwrite users set font, setting it as a percentage will just scale a users devices font size rather than just replacing it */
   font-size: 62.5%;
   overflow-x: hidden;
+
+  /* Not supported on ie, opera mini, or KaiOS browser at all, all other browsers support this as of their latest versions according to caniuse.com will implement the js solution anyways for practice + just in case it's needed for other browsers */
+  /* scroll-behavior: smooth; */
 }
 
 body {
@@ -216,6 +219,23 @@ h6 {
   padding: 0 5rem;
   /* background-color: #ffffff00; */
   background-color: #fdf2e9;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgba(255, 255, 255, 0.97);
+  z-index: 1000;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+
+.sticky-active {
+  margin-top: 9.6rem;
 }
 
 .main-nav {
@@ -431,7 +451,7 @@ h6 {
 /*                                                    */
 /* ************************************************** */
 .featured-in-section {
-  margin-bottom: 6.4rem;
+  /* margin-bottom: 6.4rem; */
 }
 
 .featured-in {
@@ -474,8 +494,8 @@ h6 {
 /* TODO: ADD A NEWLINE TO STEP 1 so that it doesn;t look ugly af */
 
 .how-it-works {
-  padding: 0 3.2rem;
-  padding-bottom: 12.8rem;
+  padding: 9.6rem 3.2rem 0 3.2rem;
+  /* padding-bottom: 3.2rem; */
 }
 
 .hiw-step {
@@ -538,8 +558,12 @@ h6 {
 /* ************************************************** */
 
 .meals-diet-container {
-  padding: 0 3.2rem;
+  padding: 9.6rem 3.2rem 0 3.2rem;
 }
+
+/* .meals-diet-section {
+  margin-top: 9.6rem;
+} */
 
 .recipe-card {
   position: relative;
@@ -752,7 +776,7 @@ h6 {
 /* ************************************************** */
 
 .pricing-container {
-  padding: 9.6rem 3.2rem;
+  padding: 9.6rem 3.2rem 0 3.2rem;
   width: 100%;
   column-gap: 6.4rem;
   row-gap: 4.8rem;
@@ -888,7 +912,7 @@ h6 {
 
 .cta-container {
   max-width: 120rem;
-  padding: 0 3.2rem;
+  padding: 9.6rem 3.2rem 0 3.2rem;
   margin: 0 auto;
   padding-bottom: 12.8rem;
   /* overflow: hidden; */
@@ -1355,7 +1379,7 @@ h6 {
 /* 640 px */
 @media (max-width: 40rem) {
   .featured-in-section {
-    margin-bottom: 2.2rem;
+    /* margin-bottom: 2.2rem; */
   }
 
   .featured-in {
@@ -1509,7 +1533,7 @@ h6 {
   }
 
   .pricing-container {
-    padding-bottom: 4.8rem;
+    padding-bottom: 0rem;
   }
 
   .shared-features-container {
@@ -1521,7 +1545,7 @@ h6 {
   }
 
   .cta-container {
-    padding-bottom: 6.4rem;
+    padding: 6.4rem 3.2rem;
   }
 
   .cta-grid {
