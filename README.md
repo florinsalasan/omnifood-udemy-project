@@ -52,10 +52,6 @@ Use starter code to start each section, and **final code to compare it with your
 
 **A:** A certificate of completion is provided by Udemy after you complete 100% of the course. After completing the course, just click on the "Your progress" indicator in the top right-hand corner of the course page. If you want to change your name on the certificate, please [contact the Udemy support team](https://support.udemy.com/hc/en-us).
 
-### Q12: Can you add subtitles in my language?
+### THE COURSE HAS BEEN COMPLETED AND I'VE DEPLOYED A LIVE VERSION
 
-**A:** No. I provide professional English captions, but Udemy is responsible for subtitles in all other languages (automatic translations). So please [contact the Udemy support team](https://support.udemy.com/hc/en-us) to request your own language.
-
-### Q13: Do you accept pull requests?
-
-**A:** No, for the simple reason that I want this repository to contain the _exact_ same code that is shown in the videos. However, please feel free to add an issue if you found one.
+Check out the final product at [this link](https://sweet-entremet-7e4e7a.netlify.app/), feel free to reach out about any issues you may find.
