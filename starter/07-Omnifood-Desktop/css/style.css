@@ -1645,10 +1645,6 @@ picture {
   .copyright-footer {
     font-size: 1rem;
   }
-}
-
-/* Does anyone even own a galaxy fold to have a width of 280px?? */
-@media screen and (max-width: 280px) {
   .featured-in-gallery {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
@@ -1666,7 +1662,10 @@ picture {
   .featured-in-img-container:last-child {
     grid-column: 6 / -2;
   }
+}
 
+/* Does anyone even own a galaxy fold to have a width of 280px?? */
+@media screen and (max-width: 320px) {
   .customer-satisfaction-container {
     flex-direction: column;
     justify-content: center;
